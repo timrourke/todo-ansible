@@ -1,0 +1,12 @@
+---
+- name: Install Vim, the MySQL client, and Nginx
+  hosts: todo_local
+  remote_user: root
+  become: yes
+
+  roles:
+    - common
+    - vim
+    - php-fpm
+    - mysql
+    - nginx
