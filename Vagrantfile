@@ -18,5 +18,13 @@ Vagrant.configure("2") do |config|
 
   # The source for `todo` needs to be a sibling of this project on your local
   # host OS's filesystem.
-  config.vm.synced_folder "./../todo", "/var/www/api", type: "nfs"
+  config.vm.synced_folder "./../todo", "/var/www/api",
+	id: "api",
+	type: "nfs"
+
+  # The source for `todo-frontend` needs to be a sibling of this project on your
+  # local host OS's filesystem.
+  config.vm.synced_folder "./../todo-frontend", "/var/www/frontend",
+	id: "frontend",
+	type: "nfs"
 end

@@ -1,7 +1,7 @@
 server {
   # update this with a domain name
   server_name todo.localdev;
-  root /var/www/api/frontend/dist;
+  root /var/www/frontend/dist;
 
   location / {
     try_files $uri $uri/ /index.html;
